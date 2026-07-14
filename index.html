@@ -77,7 +77,8 @@ section{padding:84px 24px;position:relative;z-index:1;}
 .tab-btn:not(:last-child){border-right:1px solid var(--border2);}
 .tab-panel{display:none;}.tab-panel.active{display:block;}
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:11px;}
-.svc-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:20px;position:relative;overflow:hidden;transition:border-color 0.2s,transform 0.2s;}
+.svc-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:20px;position:relative;overflow:hidden;transition:border-color 0.2s,transform 0.2s;display:flex;flex-direction:column;}
+.svc-book{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);}
 .svc-card:hover{border-color:var(--gold-dim2);transform:translateY(-2px);}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);opacity:0;transition:opacity 0.2s;}
 .svc-card:hover::before{opacity:1;}
@@ -87,6 +88,7 @@ section{padding:84px 24px;position:relative;z-index:1;}
 .svc-desc{font-size:13px;color:var(--text-dim);line-height:1.68;margin-bottom:11px;}
 .svc-price{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--gold-light);}
 .svc-sub{font-size:11px;color:var(--text-faint);margin-top:2px;}
+.svc-book .btn-ghost{font-size:10px;padding:9px 18px;}
 .svc-badge{position:absolute;top:11px;right:11px;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 7px;border-radius:3px;background:var(--gold-dim);color:var(--gold);border:1px solid rgba(201,168,76,0.25);}
 .journey{background:var(--surface);}
 .j-box{background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(155,111,168,0.04));border:1px solid rgba(201,168,76,0.18);border-radius:16px;padding:38px;margin-top:32px;}
@@ -540,6 +542,17 @@ span[data-lang="en"]{display:none;}
         </div>
       </div>
     </div>
+    <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border);max-width:460px">
+      <div class="invest-note">
+        <p data-lang="id">Dapatkan Soul Blueprint Premium Anda dalam bentuk Laporan Digital PDF (11 Dimensi Jiwa) secara instan melalui aplikasi.</p>
+        <p data-lang="en">Get your Premium Soul Blueprint as an instant Digital PDF Report (11 Soul Dimensions) through the app.</p>
+        <div class="invest-note-price" data-lang="id">Investasi: Rp 255.000 <span>(include PDF lengkap layaknya kitab perjalanan jiwamu)</span></div>
+        <div class="invest-note-price" data-lang="en">Investment: Rp 255,000 <span>(full PDF included — your own soul journey book)</span></div>
+      </div>
+      <p style="font-size:12px;color:var(--text-faint);line-height:1.65;margin:10px 0" data-lang="id">Penasaran seperti apa peta jiwamu? Coba <strong style="color:var(--gold-light)">Prana Sangkala App</strong> sekarang dan temukan 11 Peta Jiwamu.</p>
+      <p style="font-size:12px;color:var(--text-faint);line-height:1.65;margin:10px 0" data-lang="en">Curious what your soul map looks like? Try the <strong style="color:var(--gold-light)">Prana Sangkala App</strong> now and discover your 11 Soul Maps.</p>
+      <a href="https://pranasangkala.pages.dev/" target="_blank" rel="noopener" class="btn-ghost" style="font-size:11px;padding:10px 20px;display:inline-block"><span data-lang="id">Mulai dari Prana Sangkala App</span><span data-lang="en">Start with Prana Sangkala App</span></a>
+    </div>
   </div>
 </section>
 
@@ -549,8 +562,8 @@ span[data-lang="en"]{display:none;}
     <span class="sec-eye" data-lang="en">Ardhanaraswari Blueprint</span>
     <h2 class="sec-title" data-lang="id">Dua Ruang yang <em>Saling Melengkapi</em></h2>
     <h2 class="sec-title" data-lang="en">Two Spaces That <em>Complete Each Other</em></h2>
-    <p class="ardhana-intro" data-lang="id">Satu untuk mengenali gambaran awal secara mandiri. Satu lagi untuk memahami maknanya secara utuh bersama fasilitator. Keduanya berjalan beriringan — bukan bersaing.</p>
-    <p class="ardhana-intro" data-lang="en">One to recognize the first picture on your own. Another to understand its meaning fully with a facilitator. Both walk side by side — not in competition.</p>
+    <p class="ardhana-intro" data-lang="id">Ada dua cara untuk mengenal peta hubunganmu. Yang satu kamu jalani sendiri, pelan-pelan, lewat aplikasi. Yang satu lagi kamu jalani berdua, ditemani langsung olehku, untuk memahami apa yang sesungguhnya sedang terjadi di antara kalian. Tidak ada yang lebih benar — keduanya cuma pintu masuk yang berbeda menuju ruang yang sama.</p>
+    <p class="ardhana-intro" data-lang="en">There are two ways to get to know your relationship's map. One you walk alone, slowly, through the app. The other you walk together, guided directly by me, to understand what's truly happening between you. Neither is more right than the other — they're simply different doors into the same room.</p>
 
     <div class="ardhana-grid">
       <div class="ardhana-card reveal">
@@ -558,12 +571,12 @@ span[data-lang="en"]{display:none;}
         <span class="ardhana-label" data-lang="en">Self Exploration</span>
         <div class="ardhana-ico">🪷</div>
         <div class="ardhana-card-title">Ardhanaraswari Blueprint</div>
-        <p class="ardhana-card-desc" data-lang="id">Aplikasi eksplorasi mandiri yang membantumu memperoleh gambaran awal mengenai blueprint jiwa hubungan — potensi keselarasan, dinamika dasar, serta area yang dapat mulai dipahami sebelum mengambil sesi pendampingan lebih lanjut.</p>
-        <p class="ardhana-card-desc" data-lang="en">A self-exploration app that gives you an initial picture of your relationship's soul blueprint — alignment potential, foundational dynamics, and areas you can begin to understand before taking a deeper guided session.</p>
+        <p class="ardhana-card-desc" data-lang="id">Sebuah ruang kecil untuk mulai mengenali jiwa hubunganmu sendiri — seberapa selaras kalian, pola dasar yang sering muncul, dan bagian-bagian yang mungkin selama ini belum sempat kamu pahami. Langkah pertama yang bisa kamu ambil kapan saja, tanpa perlu menunggu.</p>
+        <p class="ardhana-card-desc" data-lang="en">A small space to start getting to know your relationship's soul on your own — how aligned you are, the patterns that tend to repeat, and the parts you may not have fully understood yet. A first step you can take anytime, no need to wait.</p>
         <div class="ardhana-spacer"></div>
         <div class="invest-note">
-          <p data-lang="id">Mulailah dengan memahami gambaran awal hubunganmu secara mandiri lewat Laporan Digital PDF.</p>
-          <p data-lang="en">Begin by understanding the first picture of your relationship on your own, through a Digital PDF Report.</p>
+          <p data-lang="id">Mulai dari sini dulu — kenali gambaran awal hubunganmu lewat laporan PDF yang bisa kamu baca sendiri, pelan-pelan, di waktu yang kamu punya.</p>
+          <p data-lang="en">Start here first — get to know the first picture of your relationship through a PDF report you can read on your own, slowly, whenever you have the time.</p>
           <div class="invest-note-price" data-lang="id">Investasi: Rp 555.000 <span>(include PDF penyelarasan hubungan yang sangat lengkap)</span></div>
           <div class="invest-note-price" data-lang="en">Investment: Rp 555,000 <span>(a very complete relationship-alignment PDF included)</span></div>
         </div>
@@ -575,24 +588,24 @@ span[data-lang="en"]{display:none;}
         <span class="ardhana-label" data-lang="en">Deep Guidance</span>
         <div class="ardhana-ico">👫</div>
         <div class="ardhana-card-title">Personal & Exclusive Reading</div>
-        <p class="ardhana-card-desc" data-lang="id">Bukan sekadar versi yang lebih lengkap dari aplikasi. Ini adalah sesi pendampingan mendalam bersama fasilitator Sekar Soulpath, di mana setiap hubungan dipahami secara utuh berdasarkan dinamika unik kedua individu.</p>
-        <p class="ardhana-card-desc" data-lang="en">Not simply a more complete version of the app. This is an in-depth guided session with a Sekar Soulpath facilitator, where every relationship is understood as a whole through the unique dynamics of both individuals.</p>
+        <p class="ardhana-card-desc" data-lang="id">Ini bukan versi "lebih lengkap" dari aplikasi. Ini adalah waktu yang kalian duduki berdua, bersamaku, untuk benar-benar melihat apa yang terjadi di antara kalian — bukan dari luar, tapi dari dalam.</p>
+        <p class="ardhana-card-desc" data-lang="en">This isn't a "more complete" version of the app. This is time you sit through together, with me, to truly see what's happening between you — not from the outside, but from within.</p>
         <ul class="ardhana-list" data-lang="id">
-          <li>Pendalaman blueprint jiwa kedua individu.</li>
-          <li>Analisis dinamika hubungan yang sedang dijalani.</li>
-          <li>Pemahaman mengenai pola bawah sadar, luka, dan pelajaran jiwa yang memengaruhi hubungan.</li>
-          <li>Identifikasi area yang membutuhkan penyelarasan agar hubungan dapat bertumbuh dengan lebih sadar.</li>
-          <li>Refleksi, dialog, serta rekomendasi langkah penyelarasan yang disesuaikan dengan perjalanan masing-masing pasangan.</li>
+          <li>Menyelami peta jiwa kalian berdua, satu per satu.</li>
+          <li>Melihat dengan jujur dinamika yang sedang kalian jalani sekarang.</li>
+          <li>Mengenali pola bawah sadar, luka lama, dan pelajaran jiwa yang diam-diam memengaruhi hubungan kalian.</li>
+          <li>Menemukan titik-titik yang perlu diselaraskan, agar hubungan bisa tumbuh dengan lebih sadar.</li>
+          <li>Ruang untuk merenung, berdialog, dan pulang membawa langkah nyata yang sesuai dengan perjalanan kalian sendiri.</li>
         </ul>
         <ul class="ardhana-list" data-lang="en">
-          <li>An in-depth reading of both individuals' soul blueprints.</li>
-          <li>Analysis of the relationship dynamic currently being lived.</li>
-          <li>Understanding of the subconscious patterns, wounds, and soul lessons influencing the relationship.</li>
-          <li>Identification of areas that need alignment so the relationship can grow more consciously.</li>
-          <li>Reflection, dialogue, and alignment recommendations tailored to each couple's journey.</li>
+          <li>A close reading of both your soul blueprints, one at a time.</li>
+          <li>An honest look at the dynamic you're living right now.</li>
+          <li>Recognizing the subconscious patterns, old wounds, and soul lessons quietly shaping your relationship.</li>
+          <li>Finding the points that need aligning, so the relationship can grow more consciously.</li>
+          <li>Space to reflect, talk it through, and leave with real steps suited to your own journey.</li>
         </ul>
-        <p class="ardhana-card-desc" data-lang="id">Sesi ini memberi ruang untuk berdiskusi secara langsung, mengajukan pertanyaan, serta memahami makna di balik setiap dinamika hubungan — sesuatu yang tidak dapat diperoleh hanya melalui aplikasi.</p>
-        <p class="ardhana-card-desc" data-lang="en">This session creates space for direct discussion, asking questions, and understanding the meaning behind every relationship dynamic — something that cannot be gained through an app alone.</p>
+        <p class="ardhana-card-desc" data-lang="id">Di sini kamu bisa bertanya langsung, bicara terbuka, dan benar-benar memahami makna di balik apa yang kalian alami — hal yang memang tidak bisa didapat hanya dari layar.</p>
+        <p class="ardhana-card-desc" data-lang="en">Here you can ask questions directly, speak openly, and truly understand the meaning behind what you're living through — something a screen alone simply can't give.</p>
         <div class="ardhana-spacer"></div>
         <a href="#booking" class="btn-gold"><span data-lang="id">✨ Jadwalkan Personal Reading</span><span data-lang="en">✨ Schedule Personal Reading</span></a>
       </div>
@@ -600,8 +613,8 @@ span[data-lang="en"]{display:none;}
 
     <div class="ardhana-closing reveal">
       <span class="ardhana-closing-mark">✦</span>
-      <p data-lang="id">Ardhanaraswari Blueprint adalah langkah pertama untuk mengenali pola hubunganmu. Namun setiap hubungan memiliki cerita, pengalaman, dan perjalanan jiwa yang unik. Ketika kamu ingin memahami lebih dalam makna di balik setiap dinamika, menemukan titik penyelarasan, dan mendapatkan pendampingan yang personal, <em>Personal & Exclusive Reading</em> hadir sebagai ruang eksplorasi yang lebih utuh.</p>
-      <p data-lang="en">Ardhanaraswari Blueprint is the first step to recognizing your relationship's patterns. Yet every relationship carries its own story, experience, and soul journey. When you wish to understand more deeply the meaning behind each dynamic, find points of alignment, and receive personal guidance, <em>Personal & Exclusive Reading</em> stands ready as a more complete space of exploration.</p>
+      <p data-lang="id">Ardhanaraswari Blueprint adalah pintu pertama untuk mengenal pola hubunganmu. Tapi setiap hubungan punya ceritanya sendiri, luka dan perjalanan jiwanya sendiri, yang tidak selalu bisa dijelaskan oleh aplikasi. Ketika kamu siap memahami lebih dalam, duduk bersama, dan diselaraskan secara personal, <em>Personal & Exclusive Reading</em> ada di sana untuk menemanimu.</p>
+      <p data-lang="en">Ardhanaraswari Blueprint is the first door to recognizing your relationship's patterns. But every relationship carries its own story, its own wounds and soul journey, which an app alone can't always explain. When you're ready to go deeper, sit together, and be guided personally, <em>Personal & Exclusive Reading</em> is there to walk with you.</p>
     </div>
   </div>
 </section>
@@ -620,30 +633,20 @@ span[data-lang="en"]{display:none;}
       <p style="font-size:12px;color:var(--text-faint);font-style:italic;margin-bottom:18px" data-lang="en">For everyone, all backgrounds & beliefs</p>
       <div class="svc-grid">
         <div class="svc-card reveal"><div class="svc-ico">🔮</div><div class="svc-name">Prana Sangkala Personal Reading</div><div class="svc-tag" data-lang="id">Interpretasi Personal Peta Jiwa</div><div class="svc-tag" data-lang="en">Personal Soul Map Interpretation</div><div class="svc-desc" data-lang="id">Sesi interpretasi personal berdasarkan metodologi Prana Sangkala — menghubungkan seluruh Peta Jiwa menjadi satu pemahaman yang utuh tentang perjalanan hidupmu. Bukan sekadar membacakan hasil, sesi ini menuntunmu memahami keterkaitan antara karakter jiwa, energi, pola leluhur, momentum kehidupan, tantangan, dan potensi — hingga arah langkah yang selaras dengan kondisi hidupmu saat ini.</div><div class="svc-desc" data-lang="en">A personal interpretation session grounded in the Prana Sangkala methodology — weaving your entire Soul Map into one complete understanding of your life's journey. More than a reading of results, this session guides you through the relationship between your soul character, energy, ancestral patterns, life momentum, challenges, and potential — toward a path aligned with where you stand today.</div><div class="svc-price">Rp 777.000 <span style="font-size:12px;color:var(--text-faint)">/ $50</span></div><div class="svc-sub" data-lang="id">Sesi personal 1-on-1 · 90–120 menit</div><div class="svc-sub" data-lang="en">Personal 1-on-1 session · 90–120 minutes</div>
-          <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border)">
-            <p style="font-size:12px;color:var(--text-faint);line-height:1.65;margin-bottom:10px" data-lang="id">Baru ingin mengenal Prana Sangkala? Anda dapat memulai dari <strong style="color:var(--gold-light)">Prana Sangkala App</strong> untuk memperoleh Soul Blueprint Premium, yaitu laporan digital berisi 11 Peta Jiwa Prana Sangkala. Bagi yang ingin memahami makna di balik Soul Blueprint secara lebih mendalam melalui interpretasi personal, sesi Prana Sangkala Personal Reading menjadi langkah berikutnya.</p>
-            <p style="font-size:12px;color:var(--text-faint);line-height:1.65;margin-bottom:10px" data-lang="en">New to Prana Sangkala? You can start with the <strong style="color:var(--gold-light)">Prana Sangkala App</strong> to get your Soul Blueprint Premium — a digital report containing all 11 Prana Sangkala Soul Maps. For those who wish to go deeper into the meaning behind their Soul Blueprint through personal interpretation, the Prana Sangkala Personal Reading is the next step.</p>
-            <div class="invest-note">
-              <p data-lang="id">Dapatkan Soul Blueprint Premium Anda dalam bentuk Laporan Digital PDF (11 Dimensi Jiwa) secara instan melalui aplikasi.</p>
-              <p data-lang="en">Get your Premium Soul Blueprint as an instant Digital PDF Report (11 Soul Dimensions) through the app.</p>
-              <div class="invest-note-price" data-lang="id">Investasi: Rp 255.000 <span>(include PDF lengkap layaknya kitab perjalanan jiwamu)</span></div>
-              <div class="invest-note-price" data-lang="en">Investment: Rp 255,000 <span>(full PDF included — your own soul journey book)</span></div>
-            </div>
-            <a href="#" target="_blank" class="btn-ghost" style="font-size:11px;padding:10px 20px;display:inline-block"><span data-lang="id">Mulai dari Prana Sangkala App</span><span data-lang="en">Start with Prana Sangkala App</span></a>
-          </div>
+          <div class="svc-book"><a href="#booking" class="btn-ghost"><span data-lang="id">✦ Booking Sekarang</span><span data-lang="en">✦ Book Now</span></a></div>
         </div>
-        <div class="svc-card reveal"><div class="svc-ico">🔥</div><div class="svc-name">Brahma Kunda</div><div class="svc-tag">Fire Release Session</div><div class="svc-desc" data-lang="id">Peleburan api — membakar satu pola atau beban dari hasil Prana Sangkala menggunakan EFT dan teknik pelepasan.</div><div class="svc-desc" data-lang="en">Fire release — burning one pattern revealed from Prana Sangkala using EFT and release techniques.</div><div class="svc-price">Rp 888.000</div><div class="svc-sub" data-lang="id">Setelah Prana Sangkala</div><div class="svc-sub" data-lang="en">After Prana Sangkala</div></div>
-        <div class="svc-card reveal"><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="id">Promo</div><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="en">Promo</div><div class="svc-ico">⚡</div><div class="svc-name">Sankalpa Agni</div><div class="svc-tag" data-lang="id">Sesi Transformasi Intensif</div><div class="svc-tag" data-lang="en">Intensive Transformation Session</div><div class="svc-desc" data-lang="id">Transformasi jiwa menyeluruh — seluruh lapisan jiwa melalui integrasi penuh NLP, EFT, dan Hipnosis. Satu sesi penyelarasan yang menuntunmu melepaskan pola lama dan kembali pada versi dirimu yang paling utuh.</div><div class="svc-desc" data-lang="en">Total soul transformation — all soul layers through full NLP, EFT, and Hypnosis integration. One alignment session that guides you to release old patterns and return to your most whole self.</div><div class="svc-price"><span class="price-was">Rp 2.222.000</span>Rp 1.111.000</div><div class="svc-sub" data-lang="id">Format Universal · Offline</div><div class="svc-sub" data-lang="en">Universal Format · Offline</div></div>
-        <div class="svc-card reveal"><div class="svc-badge" data-lang="id">Pasangan</div><div class="svc-badge" data-lang="en">Couples</div><div class="svc-ico">👫</div><div class="svc-name">Ardhanaraswari</div><div class="svc-tag">Sacred Union Blueprint</div><div class="svc-desc" data-lang="id">Pembacaan blueprint jiwa untuk pasangan — keselarasan, benturan karmis, dan potensi tertinggi hubungan.</div><div class="svc-desc" data-lang="en">Soul blueprint for couples — alignment, karmic collisions, and highest relationship potential.</div><div class="svc-price">Rp 2.222.000 <span style="font-size:12px;color:var(--text-faint)">/ $150</span></div><div class="svc-sub" data-lang="id">Lokal & Internasional</div><div class="svc-sub" data-lang="en">Local & International</div></div>
+        <div class="svc-card reveal"><div class="svc-ico">🔥</div><div class="svc-name">Brahma Kunda</div><div class="svc-tag">Fire Release Session</div><div class="svc-desc" data-lang="id">Peleburan api — membakar satu pola atau beban dari hasil Prana Sangkala menggunakan EFT dan teknik pelepasan.</div><div class="svc-desc" data-lang="en">Fire release — burning one pattern revealed from Prana Sangkala using EFT and release techniques.</div><div class="svc-price">Rp 888.000</div><div class="svc-sub" data-lang="id">Setelah Prana Sangkala</div><div class="svc-sub" data-lang="en">After Prana Sangkala</div><div class="svc-book"><a href="#booking" class="btn-ghost"><span data-lang="id">✦ Booking Sekarang</span><span data-lang="en">✦ Book Now</span></a></div></div>
+        <div class="svc-card reveal"><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="id">Promo</div><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="en">Promo</div><div class="svc-ico">⚡</div><div class="svc-name">Sankalpa Agni</div><div class="svc-tag" data-lang="id">Sesi Transformasi Intensif</div><div class="svc-tag" data-lang="en">Intensive Transformation Session</div><div class="svc-desc" data-lang="id">Transformasi jiwa menyeluruh — seluruh lapisan jiwa melalui integrasi penuh NLP, EFT, dan Hipnosis. Satu sesi penyelarasan yang menuntunmu melepaskan pola lama dan kembali pada versi dirimu yang paling utuh.</div><div class="svc-desc" data-lang="en">Total soul transformation — all soul layers through full NLP, EFT, and Hypnosis integration. One alignment session that guides you to release old patterns and return to your most whole self.</div><div class="svc-price"><span class="price-was">Rp 2.222.000</span>Rp 1.111.000</div><div class="svc-sub" data-lang="id">Format Universal · Offline</div><div class="svc-sub" data-lang="en">Universal Format · Offline</div><div class="svc-book"><a href="#booking" class="btn-ghost"><span data-lang="id">✦ Booking Sekarang</span><span data-lang="en">✦ Book Now</span></a></div></div>
+        <div class="svc-card reveal"><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="id">Promo · Pasangan</div><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="en">Promo · Couples</div><div class="svc-ico">👫</div><div class="svc-name">Ardhanaraswari</div><div class="svc-tag">Sacred Union Blueprint</div><div class="svc-desc" data-lang="id">Bukan sekadar pembacaan, ini adalah metode pendampingan untuk pasangan — menyelami dua jiwa sekaligus, mengenali keselarasan, benturan karmis, dan potensi tertinggi dari hubungan yang sedang kalian jalani bersama.</div><div class="svc-desc" data-lang="en">More than a reading — this is a guided companionship method for couples, exploring two souls at once to reveal alignment, karmic collisions, and the highest potential of the relationship you're living together.</div><div class="svc-price"><span class="price-was">Rp 2.222.000</span>Rp 1.777.000 <span style="font-size:12px;color:var(--text-faint)">/ $115</span></div><div class="svc-sub" data-lang="id">Lokal & Internasional</div><div class="svc-sub" data-lang="en">Local & International</div><div class="svc-book"><a href="#booking" class="btn-ghost"><span data-lang="id">✦ Booking Sekarang</span><span data-lang="en">✦ Book Now</span></a></div></div>
       </div>
     </div>
     <div class="tab-panel" id="tab-nus">
       <p style="font-size:12px;color:var(--text-faint);font-style:italic;margin-bottom:18px" data-lang="id">Pengalaman spiritual autentik Bali · Untuk jiwa yang terbuka</p>
       <p style="font-size:12px;color:var(--text-faint);font-style:italic;margin-bottom:18px" data-lang="en">Authentic Balinese spiritual experience · For open souls</p>
       <div class="svc-grid">
-        <div class="svc-card reveal"><div class="svc-badge">Bali</div><div class="svc-ico">💧</div><div class="svc-name" data-lang="id">Melukat Sakral</div><div class="svc-name" data-lang="en">Sacred Melukat</div><div class="svc-tag" data-lang="id">Ritual Penyucian Air Suci</div><div class="svc-tag" data-lang="en">Sacred Water Purification</div><div class="svc-desc" data-lang="id">Ritual melukat di mata air suci tersembunyi — autentik dan jauh dari keramaian turis.</div><div class="svc-desc" data-lang="en">Melukat at a hidden sacred spring — authentic and far from tourist crowds.</div><div class="svc-price">Rp 2.000.000 <span style="font-size:12px;color:var(--text-faint)">/ $130</span></div><div class="svc-sub" data-lang="id">Termasuk transportasi & banten</div><div class="svc-sub" data-lang="en">Includes transport & offerings</div></div>
-        <div class="svc-card reveal"><div class="svc-badge">Bali</div><div class="svc-ico">🏛️</div><div class="svc-name" data-lang="id">Pura & Ajaran Kuno</div><div class="svc-name" data-lang="en">Temple & Ancient Teachings</div><div class="svc-tag">Immersive Spiritual Learning</div><div class="svc-desc" data-lang="id">Kunjungan pura sakral dengan pemahaman mendalam Siwa Sogata, Ardhanaraswari, Siwa Durga, Bujangga.</div><div class="svc-desc" data-lang="en">Sacred temple visits with deep immersion in Siwa Sogata, Ardhanaraswari, Siwa Durga, Bujangga.</div><div class="svc-price">Rp 2.000.000 <span style="font-size:12px;color:var(--text-faint)">/ $130</span></div><div class="svc-sub" data-lang="id">Termasuk transportasi & tiket</div><div class="svc-sub" data-lang="en">Includes transport & fees</div></div>
-        <div class="svc-card reveal" style="border-color:rgba(201,168,76,0.2)"><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="id">Terlengkap</div><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="en">Complete</div><div class="svc-ico">✨</div><div class="svc-name" data-lang="id">Melukat + Pura + Prana Sangkala</div><div class="svc-name" data-lang="en">Melukat + Temple + Prana Sangkala</div><div class="svc-tag" data-lang="id">Disucikan · Dicerahkan · Dipetakan</div><div class="svc-tag" data-lang="en">Purified · Enlightened · Mapped</div><div class="svc-desc" data-lang="id">Paket satu hari — melukat, pura, ajaran kuno, plus Prana Sangkala personal.</div><div class="svc-desc" data-lang="en">One-day package — melukat, temple, ancient teachings, plus personal Prana Sangkala.</div><div class="svc-price">Rp 3.200.000 <span style="font-size:12px;color:var(--text-faint)">/ $210</span></div><div class="svc-sub" data-lang="id">Semua sudah termasuk</div><div class="svc-sub" data-lang="en">Everything included</div></div>
+        <div class="svc-card reveal"><div class="svc-badge">Bali</div><div class="svc-ico">💧</div><div class="svc-name" data-lang="id">Melukat Sakral</div><div class="svc-name" data-lang="en">Sacred Melukat</div><div class="svc-tag" data-lang="id">Ritual Penyucian Air Suci</div><div class="svc-tag" data-lang="en">Sacred Water Purification</div><div class="svc-desc" data-lang="id">Ritual melukat di mata air suci tersembunyi — autentik dan jauh dari keramaian turis.</div><div class="svc-desc" data-lang="en">Melukat at a hidden sacred spring — authentic and far from tourist crowds.</div><div class="svc-price">Rp 2.000.000 <span style="font-size:12px;color:var(--text-faint)">/ $130</span></div><div class="svc-sub" data-lang="id">Termasuk transportasi & banten</div><div class="svc-sub" data-lang="en">Includes transport & offerings</div><div class="svc-book"><a href="#booking" class="btn-ghost"><span data-lang="id">✦ Booking Sekarang</span><span data-lang="en">✦ Book Now</span></a></div></div>
+        <div class="svc-card reveal"><div class="svc-badge">Bali</div><div class="svc-ico">🏛️</div><div class="svc-name" data-lang="id">Pura & Ajaran Kuno</div><div class="svc-name" data-lang="en">Temple & Ancient Teachings</div><div class="svc-tag">Immersive Spiritual Learning</div><div class="svc-desc" data-lang="id">Kunjungan pura sakral dengan pemahaman mendalam Siwa Sogata, Ardhanaraswari, Siwa Durga, Bujangga.</div><div class="svc-desc" data-lang="en">Sacred temple visits with deep immersion in Siwa Sogata, Ardhanaraswari, Siwa Durga, Bujangga.</div><div class="svc-price">Rp 2.000.000 <span style="font-size:12px;color:var(--text-faint)">/ $130</span></div><div class="svc-sub" data-lang="id">Termasuk transportasi & tiket</div><div class="svc-sub" data-lang="en">Includes transport & fees</div><div class="svc-book"><a href="#booking" class="btn-ghost"><span data-lang="id">✦ Booking Sekarang</span><span data-lang="en">✦ Book Now</span></a></div></div>
+        <div class="svc-card reveal" style="border-color:rgba(201,168,76,0.2)"><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="id">Terlengkap</div><div class="svc-badge" style="background:var(--gold-dim);color:var(--gold)" data-lang="en">Complete</div><div class="svc-ico">✨</div><div class="svc-name" data-lang="id">Melukat + Pura + Prana Sangkala</div><div class="svc-name" data-lang="en">Melukat + Temple + Prana Sangkala</div><div class="svc-tag" data-lang="id">Disucikan · Dicerahkan · Dipetakan</div><div class="svc-tag" data-lang="en">Purified · Enlightened · Mapped</div><div class="svc-desc" data-lang="id">Paket satu hari — melukat, pura, ajaran kuno, plus Prana Sangkala personal.</div><div class="svc-desc" data-lang="en">One-day package — melukat, temple, ancient teachings, plus personal Prana Sangkala.</div><div class="svc-price">Rp 3.200.000 <span style="font-size:12px;color:var(--text-faint)">/ $210</span></div><div class="svc-sub" data-lang="id">Semua sudah termasuk</div><div class="svc-sub" data-lang="en">Everything included</div><div class="svc-book"><a href="#booking" class="btn-ghost"><span data-lang="id">✦ Booking Sekarang</span><span data-lang="en">✦ Book Now</span></a></div></div>
       </div>
     </div>
   </div>
