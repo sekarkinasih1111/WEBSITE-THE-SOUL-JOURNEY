@@ -143,6 +143,8 @@ section{padding:84px 24px;position:relative;z-index:1;}
 .testi-vis{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:11px;}
 .testi-vis img{width:100%;border-radius:9px;border:1px solid var(--border);cursor:pointer;}
 .faq{background:var(--surface);}
+.faq-tabs{margin-top:28px;margin-bottom:0;}
+.faq-item.faq-off{display:none!important;}
 .faq-list{display:flex;flex-direction:column;gap:7px;margin-top:32px;}
 .faq-item{background:var(--card);border:1px solid var(--border);border-radius:9px;overflow:hidden;cursor:pointer;}
 .faq-q{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-size:14px;color:var(--text);gap:14px;}
@@ -1124,54 +1126,213 @@ body::before{background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(95,109,58
     <span class="sec-eye">FAQ</span>
     <h2 class="sec-title" data-lang="id">Pertanyaan yang <em>Sering Ditanyakan</em></h2>
     <h2 class="sec-title" data-lang="en">Frequently Asked <em>Questions</em></h2>
+    <div class="gtabs faq-tabs" role="tablist">
+      <button class="gtab active" data-cat="umum" onclick="faqTab('umum',this)"><span data-lang="id">Umum</span><span data-lang="en">General</span></button>
+      <button class="gtab" data-cat="prana" onclick="faqTab('prana',this)">Prana Sangkala</button>
+      <button class="gtab" data-cat="journey" onclick="faqTab('journey',this)">Sacred Journey</button>
+      <button class="gtab" data-cat="ardha" onclick="faqTab('ardha',this)">Ardhanaraswari</button>
+      <button class="gtab" data-cat="retreat" onclick="faqTab('retreat',this)">Retreat</button>
+    </div>
     <div class="faq-list">
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="id">
+      <div class="faq-item reveal" data-cat="umum" onclick="this.classList.toggle('open')" data-lang="id">
         <div class="faq-q">Apakah saya harus percaya pada sistem ini dulu?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Tidak harus. Prana Sangkala bekerja berdasarkan data tanggal lahir. Yang penting adalah keterbukaan untuk mendengar — hasilnya bisa kamu rasakan sendiri.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="id">
+      <div class="faq-item reveal" data-cat="umum" onclick="this.classList.toggle('open')" data-lang="id">
         <div class="faq-q">Berapa lama durasi sesi?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Prana Sangkala Personal Reading: 90-120 menit. Brahma Kunda: 60 menit. Sankalpa Agni: 2-3 jam. Sacred Bali Soul Journey: 3 hari. The Ardhanaraswari Retreat: 3 hari 2 malam.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="id">
+      <div class="faq-item reveal" data-cat="umum" onclick="this.classList.toggle('open')" data-lang="id">
         <div class="faq-q">Apakah bisa dilakukan online dari luar Indonesia?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Ya! Prana Sangkala, Brahma Kunda, dan Ardhanaraswari bisa dilakukan via Zoom atau WhatsApp Video dalam bahasa Indonesia maupun Inggris.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="id">
+      <div class="faq-item reveal" data-cat="umum" onclick="this.classList.toggle('open')" data-lang="id">
         <div class="faq-q">Apa yang perlu disiapkan?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Cukup tanggal lahir lengkap (tanggal, bulan, tahun). Untuk Ardhanaraswari, siapkan tanggal lahir kedua pasangan. Datanglah dengan pikiran terbuka.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="id">
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="id">
         <div class="faq-q">Apakah Prana Sangkala sama dengan astrologi atau tarot?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Tidak. Prana Sangkala adalah sistem unik yang mengintegrasikan Numerologi Pythagoras dengan Pawukon Bali — sistem kalender sakral berusia ribuan tahun.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="id">
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa saja yang dibaca dalam Prana Sangkala?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Prana Sangkala membaca peta jiwamu dalam 11 dimensi lewat dua sistem yang bekerja paralel: Numerologi Pythagoras sebagai DNA Jiwa (siapa kamu di level terdalam) dan Pawukon Bali sebagai Atmosfer Jiwa (bagaimana energimu bergerak). Di dalamnya ada analisa jiwa dan archetype, elemen Prana Sangkala (Api, Angin, Air), Mandala Body Scanning, peta energi tubuh, pola garis leluhur, dan dimensi lainnya. Klik tiap dimensi di bagian Prana Sangkala di atas untuk penjelasan lengkap.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apakah Prana Sangkala meramal masa depan?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Tidak. Prana Sangkala bukan peta yang menentukan masa depan atau membatasi pilihan hidupmu. Ia adalah cermin untuk membantumu memahami mengapa perjalanan hidup membentuk dirimu hari ini, mengapa ada peristiwa yang berulang, dan mengapa kamu mudah terluka pada hal tertentu.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa yang saya dapat di sesi Prana Sangkala Personal Reading?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Sesi 1-on-1 selama 90 sampai 120 menit yang menghubungkan seluruh peta jiwamu menjadi satu pemahaman utuh. Bukan sekadar membacakan hasil: kamu dituntun memahami keterkaitan antara karakter jiwa, energi, pola leluhur, momentum kehidupan, tantangan, dan potensi, hingga arah langkah yang selaras dengan kondisi hidupmu saat ini. Sesi bisa dilakukan online.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa hubungan Prana Sangkala dengan Brahma Kunda?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Brahma Kunda adalah sesi lanjutan setelah Prana Sangkala (60 menit). Di sesi ini, satu pola atau beban yang muncul dari hasil Prana Sangkala dilebur lewat EFT dan teknik pelepasan, dalam format Fire Release Session.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="id">
         <div class="faq-q">Apakah Sacred Journey cocok untuk non-Hindu?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Ya. Sacred Journey terbuka untuk semua latar belakang. Ajaran Siwa Sogata adalah kebijaksanaan universal Nusantara yang melampaui label agama modern.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="en">
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa saja yang dilakukan selama Sacred Bali Soul Journey?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Tiga hari: Hari 1, Melukat di penglukatan kuno yang telah berdiri ratusan tahun. Hari 2, Pura & Ajaran Kuno, memahami langsung filosofi Siwa Sogata, Ardhanaraswari, dan jalan para Bujangga. Hari 3, puncak perjalanan: pembacaan Prana Sangkala personal, lalu Inisiasi Atma Sadhana di bawah cahaya api ritual. Transportasi dan banten sudah termasuk.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa itu Inisiasi Atma Sadhana?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Puncak Sacred Bali Soul Journey di hari ketiga. Dengan mantra, mudra, dan persembahan di bawah cahaya api ritual, kamu menjalani inisiasi di mana jiwa sejatimu diaktivasi dan sankalpa baru ditanamkan untuk kehidupan yang kamu tuju.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Kenapa pendaftaran Sacred Journey harus melalui wawancara?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Karena kesakralan Inisiasi Atma Sadhana, perjalanan ini hanya dibuka bagi jiwa-jiwa yang telah selaras. Setiap pendaftaran melalui wawancara singkat untuk memastikan kesiapan energi peserta.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Berapa peserta per perjalanan, dan apa bedanya dengan villa?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Minimal 1 dan maksimal 5 peserta, dengan harga per orang. Ada pilihan tanpa villa dan pilihan termasuk villa selama 3 hari 2 malam. Harga lengkapnya ada di bagian Sacred Bali Soul Journey di atas.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="ardha" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa saja isi Ardhanaraswari Blueprint?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Ardhanaraswari Blueprint adalah laporan untuk dua orang yang tersusun dalam bab-bab berurutan. Isinya membaca peta jiwa kalian masing-masing lewat Numerologi Pythagoras dan Patemon, sisi Purusa dan Pradana dalam hubungan, lapisan tujuh chakra kalian berdua, pola komunikasi dan potensi konflik, pola konflik yang sering berulang, hingga penutup untuk direnungkan bersama. Semuanya dibaca berdampingan antara kamu dan pasangan, dan bisa dibuka kapan saja.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="ardha" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa bedanya Ardhanaraswari Blueprint dengan sesi Personal Reading?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Ardhanaraswari Blueprint adalah laporan PDF otomatis yang kamu baca sendiri, pelan-pelan, tanpa sesi interaksi langsung. Personal Reading adalah waktu yang kalian jalani berdua bersama Sekar untuk melihat dinamika hubungan dari dalam, dengan ruang untuk bertanya dan berdialog secara langsung. Keduanya adalah pintu masuk yang berbeda, bukan yang satu lebih benar dari yang lain.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="ardha" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa saja yang dibahas dalam sesi Personal Reading Ardhanaraswari?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Sesi ini menyelami peta jiwa kalian berdua satu per satu, melihat dinamika yang sedang dijalani sekarang, dan mengenali pola bawah sadar, luka lama, serta pelajaran jiwa yang memengaruhi hubungan. Dasarnya adalah Numerologi Pythagoras dan Patemon (pertemuan dua kelahiran dalam sistem pewacakan Bali). Kalian juga menemukan titik yang perlu diselaraskan, lalu pulang membawa langkah nyata yang sesuai dengan perjalanan kalian.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="ardha" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Bagaimana cara mengikuti sesi Ardhanaraswari?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Pilih layanan Ardhanaraswari lewat form booking di bawah. Sesi bisa dilakukan online via Zoom atau WhatsApp Video dalam bahasa Indonesia maupun Inggris. Siapkan tanggal lahir lengkap kedua pasangan, dan datanglah dengan pikiran terbuka. Kalau ingin pengalaman 3 hari 2 malam, lihat The Ardhanaraswari Retreat.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa itu The Ardhanaraswari Retreat dan untuk siapa?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Retreat privat 3 hari 2 malam untuk satu pasangan di Kintamani, memadukan metode Sekar SoulPath, produk Ritual Niskala, dan pengalaman alam bersama Sekar Bali Tour. Isinya hipnoterapi, pemetaan Prana Sangkala, Releasing Activation (EFT dan shadow work), hingga ritual Sankalpa dan Melukat. Cocok untuk pasangan yang ingin memahami luka lama dan pola yang terus berulang, bukan untuk mencari siapa yang salah.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa bedanya Paket Agni dan Paket Bharana?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Keduanya 3 hari 2 malam dan privat untuk satu pasangan. Paket Agni adalah Intimate Nature Retreat di glamping premium atau cabin kayu privat. Paket Bharana adalah Luxury Sanctuary Retreat di private pool villa atau boutique resort, dengan menu premium dan 1 candlelight dinner privat, tur Jeep 4WD eksklusif dilanjutkan ke Natural Hot Spring, follow-up coaching via Zoom 2 minggu setelah retreat, serta gift box produk Sekar SoulPath. Semua isi Paket Agni juga ada di Paket Bharana.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apa saja yang dilakukan selama 3 hari?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Hari 1, Memasuki Smasana: kedatangan dan grounding, sesi pengantar, lalu Ritual Api Smasana dan hipnoterapi. Hari 2, Menari di Atas Luka: Jeep 4WD pagi hari, Mapping Prana Sangkala, dan Releasing Activation (EFT dan shadow work). Hari 3, Bharana: Ritual Mandi Garam Pasangan, Pengikatan Sankalpa dan Melukat, lalu penutupan pukul 11.00. Jadwal lengkap ada di bagian retreat di atas.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Kenapa harus melewati wawancara sebelum mendaftar?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Karena sesinya menyentuh hal-hal yang berat, setiap pendaftaran dimulai dengan wawancara singkat untuk memastikan retreat ini tepat bagi kalian berdua. Retreat ini juga privat, hanya untuk satu pasangan dalam satu waktu.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apakah retreat ini pengganti terapi atau konseling?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Bukan. Retreat ini bukan pengganti terapi atau bantuan profesional, dan memeluk sisi gelap pasangan tidak berarti membenarkan perilaku yang melukai. Bila ada kekerasan dalam hubungan, bantuan profesional adalah langkah pertama.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Apakah makanan, diet khusus, dan penjemputan sudah termasuk?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Makan penuh (sarapan, makan siang, makan malam) selama retreat sudah termasuk di kedua paket. Di Paket Bharana, menu bisa menyesuaikan diet khusus atau organik. Detail penjemputan dan transportasi dikonfirmasi saat proses pendaftaran.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="id">
+        <div class="faq-q">Bagaimana cara mendaftar?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Ajukan lewat WhatsApp untuk memulai wawancara kelayakan. <a href="https://wa.me/6289616673334?text=Halo%20Sekar%2C%20saya%20ingin%20mengajukan%20diri%20(apply)%20untuk%20The%20Ardhanaraswari%20Retreat%203%20Hari%202%20Malam.%20Bolehkah%20kami%20memulai%20proses%20wawancara%20kelayakan%3F" target="_blank" rel="noopener" style="color:var(--gold-light);text-decoration:underline" onclick="event.stopPropagation()">Klik di sini untuk mengajukan retreat</a>. Setelah wawancara, kalian bisa memilih paket lewat form booking di bawah.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="umum" onclick="this.classList.toggle('open')" data-lang="en">
         <div class="faq-q">Do I need to believe in this system first?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Not at all. Prana Sangkala works based on birth date data. All that matters is openness — you can feel the results yourself.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="en">
+      <div class="faq-item reveal" data-cat="umum" onclick="this.classList.toggle('open')" data-lang="en">
         <div class="faq-q">How long does a session last?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Prana Sangkala Personal Reading: 90-120 min. Brahma Kunda: 60 min. Sankalpa Agni: 2-3 hours. Sacred Bali Soul Journey: 3 days. The Ardhanaraswari Retreat: 3 days 2 nights.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="en">
+      <div class="faq-item reveal" data-cat="umum" onclick="this.classList.toggle('open')" data-lang="en">
         <div class="faq-q">Can it be done online from outside Indonesia?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Yes! Prana Sangkala, Brahma Kunda, and Ardhanaraswari can be done via Zoom or WhatsApp Video in Indonesian or English.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="en">
+      <div class="faq-item reveal" data-cat="umum" onclick="this.classList.toggle('open')" data-lang="en">
         <div class="faq-q">What do I need to prepare?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Just your complete birth date (day, month, year). For Ardhanaraswari, prepare both partners' birth dates. Come with an open mind.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="en">
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="en">
         <div class="faq-q">Is Prana Sangkala the same as astrology or tarot?<span class="faq-chv">▼</span></div>
         <div class="faq-a">No. Prana Sangkala is a unique system integrating Pythagorean Numerology with the Balinese Pawukon — a sacred calendar system thousands of years old.</div>
       </div>
-      <div class="faq-item reveal" onclick="this.classList.toggle('open')" data-lang="en">
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What does Prana Sangkala read?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Prana Sangkala reads your soul map across 11 dimensions through two systems working in parallel: Pythagorean Numerology as the Soul DNA (who you are at the deepest level) and the Balinese Pawukon as the Soul Atmosphere (how your energy moves). It includes soul analysis and archetype, the Prana Sangkala elements (Fire, Wind, Water), Mandala Body Scanning, the body energy map, ancestral lineage patterns, and more. Click each dimension in the Prana Sangkala section above for the full explanation.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">Does Prana Sangkala predict the future?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">No. Prana Sangkala is not a map that dictates your future or limits your choices. It is a mirror that helps you understand why your life journey shaped who you are today, why certain events repeat, and why you are easily wounded by certain things.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What do I get in a Prana Sangkala Personal Reading session?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">A 1-on-1 session of 90 to 120 minutes that weaves your whole soul map into one complete understanding. It is more than a reading of results: you are guided through the relationship between your soul character, energy, ancestral patterns, life momentum, challenges, and potential, toward a path aligned with where you stand today. The session can be held online.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="prana" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">How does Prana Sangkala relate to Brahma Kunda?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Brahma Kunda is a follow-up session after Prana Sangkala (60 minutes). In it, one pattern or burden revealed by your Prana Sangkala is released using EFT and release techniques, in a Fire Release Session format.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="en">
         <div class="faq-q">Is the Sacred Bali Soul Journey suitable for non-Hindus?<span class="faq-chv">▼</span></div>
         <div class="faq-a">Yes. Open to all backgrounds. Siwa Sogata teachings are universal Nusantara wisdom transcending modern religious labels.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What happens during the Sacred Bali Soul Journey?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Three days: Day 1, Melukat at an ancient purification site that has stood for centuries. Day 2, Temple & Ancient Wisdom, understanding the philosophy of Siwa Sogata, Ardhanaraswari, and the path of the Bujangga. Day 3, the peak: a personal Prana Sangkala reading, then the Atma Sadhana Initiation by ritual firelight. Transport and offerings are included.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What is the Atma Sadhana Initiation?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">The peak of the Sacred Bali Soul Journey on day three. With mantra, mudra, and offerings by ritual firelight, you undergo an initiation in which your true soul is activated and a new sankalpa is planted for the life you are walking toward.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">Why does the Sacred Journey application require an interview?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Because of the sacredness of the Atma Sadhana Initiation, this journey is only open to souls who are already aligned. Every application goes through a brief interview to confirm the participant's energetic readiness.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="journey" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">How many people join, and what is the villa option?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Minimum 1 and maximum 5 participants, priced per person. You can choose without a villa or with a villa for 3 days 2 nights. Full prices are in the Sacred Bali Soul Journey section above.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="ardha" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What does the Ardhanaraswari Blueprint contain?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">The Ardhanaraswari Blueprint is a report for two people, arranged in chapters that build on each other. It reads each of your soul blueprints through Pythagorean Numerology and Patemon, the Purusa and Pradana sides of your relationship, the seven-chakra layer of both of you, your communication patterns and potential for conflict, the conflict patterns that tend to repeat, and a closing to reflect on together. Everything is read side by side, you and your partner, and can be opened any time.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="ardha" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What is the difference between the Ardhanaraswari Blueprint and the Personal Reading session?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">The Ardhanaraswari Blueprint is an automatic PDF report you read on your own, slowly, with no live interaction session. The Personal Reading is time you spend together with Sekar to see your relationship dynamic from within, with room to ask questions and talk it through directly. They are different doors into the same room, and neither is more right than the other.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="ardha" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What is covered in an Ardhanaraswari Personal Reading session?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">The session looks closely at both your soul blueprints one at a time, takes an honest look at the dynamic you are living right now, and recognizes the subconscious patterns, old wounds, and soul lessons shaping your relationship. It is based on Pythagorean Numerology and Patemon (the meeting of two births in the Balinese pewacakan system). You will also find the points that need aligning and leave with real steps suited to your own journey.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="ardha" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">How do I join an Ardhanaraswari session?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Choose the Ardhanaraswari service in the booking form below. Sessions can be held online via Zoom or WhatsApp Video in Indonesian or English. Prepare both partners' complete birth dates and come with an open mind. If you want a 3 days 2 nights experience, see The Ardhanaraswari Retreat.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What is The Ardhanaraswari Retreat and who is it for?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">A private 3-day, 2-night retreat for one couple in Kintamani, bringing together the Sekar SoulPath method, Ritual Niskala products, and the nature experiences of Sekar Bali Tour. It includes hypnotherapy, Prana Sangkala mapping, Releasing Activation (EFT and shadow work), and the Sankalpa and Melukat rituals. It suits couples who want to understand old wounds and patterns that keep repeating, not to find out who is at fault.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What is the difference between the Agni and Bharana packages?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Both are 3 days 2 nights and private for one couple. Agni is the Intimate Nature Retreat in a premium glamping tent or private wooden cabin. Bharana is the Luxury Sanctuary Retreat in a private pool villa or boutique resort, with a premium menu and 1 private candlelight dinner, an exclusive 4WD Jeep tour followed by a natural hot spring, Zoom follow-up coaching 2 weeks after the retreat, and a gift box of Sekar SoulPath products. Everything in Agni is also in Bharana.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">What happens over the 3 days?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Day 1, Entering Smasana: arrival and grounding, an opening session, then the Smasana Fire Ritual and hypnotherapy. Day 2, Dancing on the Wound: a morning 4WD Jeep journey, Prana Sangkala Mapping, and Releasing Activation (EFT and shadow work). Day 3, Bharana: the Couples Salt Bath Ritual, Binding the Sankalpa and Melukat, then closing at 11:00 am. The full schedule is in the retreat section above.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">Why is there an interview before I can apply?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Because the sessions touch heavy things, every application begins with a brief interview to make sure the retreat is right for both of you. The retreat is also private, held for one couple at a time.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">Is the retreat a substitute for therapy or counseling?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">No. This retreat is not a substitute for therapy or professional help, and embracing a partner's shadow does not mean excusing behavior that hurts. If there is violence in a relationship, professional help comes first.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">Are meals, special diets, and transfers included?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Full board (breakfast, lunch, dinner) is included in both packages. In the Bharana Package, the menu can be adjusted for special or organic diets. Transfer and transport details are confirmed during the application process.</div>
+      </div>
+      <div class="faq-item reveal" data-cat="retreat" onclick="this.classList.toggle('open')" data-lang="en">
+        <div class="faq-q">How do I apply?<span class="faq-chv">▼</span></div>
+        <div class="faq-a">Apply through WhatsApp to start the eligibility interview. <a href="https://wa.me/6289616673334?text=Hello%20Sekar%2C%20we%20would%20like%20to%20apply%20for%20The%20Ardhanaraswari%20Retreat%20(3%20days%202%20nights).%20May%20we%20start%20the%20eligibility%20interview%3F" target="_blank" rel="noopener" style="color:var(--gold-light);text-decoration:underline" onclick="event.stopPropagation()">Tap here to apply for the retreat</a>. After the interview, you can choose a package through the booking form below.</div>
       </div>
     </div>
   </div>
@@ -1473,6 +1634,16 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 const saved = localStorage.getItem('ssp-lang');
 if(saved==='en') setLang('en');
+</script>
+<script>
+function faqTab(c,btn){
+  document.querySelectorAll('.faq-tabs .gtab').forEach(function(b){b.classList.toggle('active',b===btn);});
+  document.querySelectorAll('#faq .faq-item').forEach(function(it){
+    it.classList.toggle('faq-off',it.getAttribute('data-cat')!==c);
+    it.classList.remove('open');
+  });
+}
+document.addEventListener('DOMContentLoaded',function(){var b=document.querySelector('.faq-tabs .gtab.active');if(b)faqTab('umum',b);});
 </script>
 </body>
 </html>
